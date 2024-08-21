@@ -23,11 +23,6 @@ pipeline {
             }
         }
 
-        stage('Deploy to Local Tomcat') {
-            steps {
-                // Run the Ansible playbook locally
-                sh 'ansible-playbook -i ~/ansible-deployment/hosts ~/ansible-deployment/deploy.yml'
-            }
-        }
+       
     }
 }
