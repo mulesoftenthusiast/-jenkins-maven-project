@@ -3,6 +3,7 @@ pipeline {
     stages {
         stage('Build') {
             steps {
+                 echo "Build.........."
                 sh 'mvn -f hello-app/pom.xml -B -DskipTests clean package'
             }
             post {
@@ -25,7 +26,7 @@ pipeline {
 
         stage('Deploy to Local Tomcat') {
             steps {
-                // Run the Ansible playbook locally
+                 echo "Ansible...."
                 sh 'ansible-playbook -i ~/ansible-deployment/hosts ~/ansible-deployment/deploy.yml'
             }
         }
