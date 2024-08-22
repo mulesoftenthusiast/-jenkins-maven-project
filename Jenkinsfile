@@ -30,7 +30,7 @@ pipeline {
         stage('Deploy to Local Tomcat') {
             steps {
                  echo "Ansible...."
-                sh 'ansible-playbook -i ~/ansible-deployment/hosts ~/ansible-deployment/deploy.yml'
+                sh 'ansible-playbook -i ~/ansible-deployment/hosts ~/ansible-deployment/deploy.yml --ask-become-pass'
             }
         }
 
