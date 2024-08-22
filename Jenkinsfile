@@ -1,7 +1,7 @@
 pipeline {
     agent any
      environment {
-        PATH = "/opt/homebrew/bin:${env.PATH}"
+        PATH = "/opt/homebrew/bin:/Library/Frameworks/Python.framework/Versions/3.10/bin:${env.PATH}"
     }
     stages {
         stage('Build') {
